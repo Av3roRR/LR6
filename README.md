@@ -1,33 +1,13 @@
 # LR6
 Лабораторная работа №6
 
-Порядок выполнения:
-
-Скопировал репозиторий командой `git clone {ссылка на репозиторий}` и перешёл в папку с проектом с помоощью команды `cd LR6`
-
-![Копирование проекта](screenshots/git_clone.png)
-
-Далее добавил файл через интерфейс GitHub и подтянул изменения в локальный репозиторй с помощью команды `git pull`
-
-![Измениения в локальном репозитории](screenshots/git_pull.png)
-
-Исправил конфликт внутри файла добавил его с помощью команды `git add *` и сделал коммит, чтобы сделать `git merge origin/branch1` далее удалил ненужную ветку
-
-![Исправление конфликта и удаление](screenshots/problem_solve.png)
-
-Добавил пару изменений и сделал commit'ы и откатил один commit.
-
-![Добавление изменений](screenshots/changes_1.png) 
-
-Далее создал ветку для отчёта
-
-![Создание ветки](screenshots/new_branch.png)
-
 # Последовательность действий
+
 1. Клонировал GitHub репозиторий используя
 ```bash
 git clone https://github.com/Av3roRR/LR6.git
 ```
+![Копирование проекта](screenshots/git_clone.png)
 
 
 2. Просмотрел логи всех веток
@@ -36,7 +16,6 @@ git branch
 git log branch1
 git log master
 ```
-
 
 3. Сделал merge ветки branch1
 ```bash
@@ -47,17 +26,21 @@ git merge origin/branch1
 ```bash
 git branch -d origin/branch1
 ```
+![Исправление конфликта и удаление](screenshots/problem_solve.png)
 
-5. Сделал несколько коммитов, оставиви комментарии
+5. Сделал несколько коммитов, оставивив комментарии
 6. Откатился на предпоследний коммит с помощью
 ```bash
-git reset --soft HEAD~1
+git reset --soft master~1
 ```
+![Добавление изменений](screenshots/changes_1.png) 
 
 7. Создал новую ветку для отчета и сразу перешёл в неё
 ```bash
 git checkout -b report
 ```
+![Создание ветки](screenshots/new_branch.png)
+
 8. С помощью команды `git log --pretty=format:"%h %ad | %s%d [%an]" --date=short` вывел логи
 
 ## git log
